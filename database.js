@@ -1,5 +1,4 @@
 const pgp = require('pg-promise')()
-
 const user = 'anthonybuccat'
 const password ="123456"
 const host = 'localhost'

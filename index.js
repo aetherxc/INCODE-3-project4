@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const port = 3000
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
@@ -19,8 +18,15 @@ app.use(express.static ('public'))
 //postgres setup
 const db = require('./database')
 
+require('dotenv').config()
 
+const hostname = process.env.HOST;
+const database = process.env.DATABASE;
+const port = process.env.PORT;
 
+console.log(hostname);
+console.log(database);
+console.log(port);
 
 
 
