@@ -35,7 +35,10 @@ app.use(expressLayouts);
 app.set('layout', './layouts/layout')
 app.set('view engine','ejs');
 
+//router files
+const loginRouter = require('./routes/login')
+const signupRouter = require('./routes/signup')
+
 //Routes
-// app.get('',(req, res) => {
-//     res.render('layout')
-// })
+app.use('pages/login', loginRouter)
+app.use('/signup', signupRouter)
