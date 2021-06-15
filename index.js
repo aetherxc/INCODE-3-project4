@@ -18,6 +18,7 @@ app.use(express.static ('public'))
 //postgres setup
 const db = require('./database')
 
+//ant added line 21-30 14/6
 require('dotenv').config()
 
 const hostname = process.env.HOST;
