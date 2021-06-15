@@ -23,7 +23,7 @@ const { Router } = require('express');
 //ant added line 21-30 14/6
 require('dotenv').config()
 
-const hostname = process.env.HOST;
+const hostname = process.env.PG_HOST;
 const database = process.env.DATABASE;
 const port = process.env.PORT;
 
@@ -46,11 +46,11 @@ app.set('layout', './layouts/layout')
 app.set('view engine','ejs');
 
 //router files
-//const loginRouter = require('./routes/login')
-//const signupRouter = require('./routes/signup')
+const loginRouter = require('./routes/login')
+const signupRouter = require('./routes/signup')
 
 //Routes
 
-//('/login', loginRouter)
-//app.use('/signup', signupRouter)
+app.use('/login', loginRouter)
+app.use('/signup', signupRouter)
 
