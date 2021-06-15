@@ -2,9 +2,9 @@
 
 const express = require('express')
 const app = express()
-const port = 3000
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
+const port = 3000
 
 app.use(express.json());
 app.use(express.urlencoded()); //Take information from URL
@@ -20,16 +20,6 @@ app.use(express.static ('public'))
 //postgres setup
 const db = require('./database');
 const { Router } = require('express');
-
-require('dotenv').config()
-
-const hostname = process.env.HOST;
-const database = process.env.DATABASE;
-const port = process.env.PORT;
-
-console.log(hostname);
-console.log(database);
-console.log(port);
 
 app.listen(port, () => {
     console.log(`Project 4 app listening at http://localhost:${port}`)
