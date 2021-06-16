@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 app.use(express.json());
-app.use(express.urlencoded()); //Take information from URL
+app.use(express.urlencoded({ extended: true }))
 
 // Set port 
 const PORT = process.env.PORT || 3000
@@ -34,6 +34,10 @@ console.log(port);
 app.listen(port, () => {
     console.log(`Project 4 app listening at http://localhost:${port}`)
 }) 
+
+
+
+
 
 //-----------------------------------------------------
 

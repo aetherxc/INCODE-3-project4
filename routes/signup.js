@@ -4,7 +4,7 @@ const db = require('../database')
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 router.get('/', (req, res) => {
-  res.render('/signup', {
+  res.render('pages/signup', {
     message: req.query.message
   })
 })
