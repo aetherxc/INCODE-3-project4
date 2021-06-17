@@ -52,9 +52,11 @@ app.set('view engine','ejs');
 //router files
 const loginRouter = require('./routes/login')
 const signupRouter = require('./routes/signup')
+const homeRouter = require('./routes/home')
+
 
 //Routes
 
 app.use('/login', loginRouter)
 app.use('/signup', signupRouter)
-
+app.use('/home', homeRouter)
