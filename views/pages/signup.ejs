@@ -18,7 +18,7 @@
         <br>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="psw"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" title ="Minimum eight characters, at least one letter, one number and one special character" required>
         <br>
         <label for="confirm-psw"><b>Re Enter Password</b></label>
         <input type="password" placeholder="Re-Enter Password" name="confirmPsw" required>
@@ -30,3 +30,5 @@
         </div>
     </div>
 </form>
+
+<input id="username" type="text" name="username" pattern="[A-Za-z]{5}" title= "Must be 5 letters" ><br>

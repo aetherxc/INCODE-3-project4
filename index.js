@@ -52,6 +52,7 @@ app.set('view engine','ejs');
 //router files
 const loginRouter = require('./routes/login')
 const signupRouter = require('./routes/signup')
+// Ant added
 const homeRouter = require('./routes/home')
 
 
@@ -59,4 +60,5 @@ const homeRouter = require('./routes/home')
 
 app.use('/login', loginRouter)
 app.use('/signup', signupRouter)
+// Ant addded
 app.use('/home', homeRouter)
