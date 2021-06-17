@@ -27,9 +27,9 @@ const hostname = process.env.PG_HOST;
 const database = process.env.DATABASE;
 const port = process.env.PORT;
 
-console.log(hostname);
-console.log(database);
-console.log(port);
+//console.log(hostname);
+//console.log(database);
+//console.log(port);
 
 app.listen(port, () => {
     console.log(`Project 4 app listening at http://localhost:${port}`)
