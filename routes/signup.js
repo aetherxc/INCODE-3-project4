@@ -21,7 +21,7 @@ if (req.body.psw != req.body.confirmPsw) {
   return res.redirect("/signup?message=Passwords%20doesn't%20match.Please%20renenter.")
 }
 
-//check: Is user/email in database?
+//check: Is email in database?
 db.oneOrNone('SELECT * FROM users WHERE email = $1;', [req.body.email.toLowerCase()])
   .then((existingUser) => {
     console.log(existingUser)
@@ -39,7 +39,7 @@ db.oneOrNone('SELECT * FROM users WHERE email = $1;', [req.body.email.toLowerCas
       }
 console.log(newUser)
 
-db.none('INSERT INTO users(surname, firstname, email, passwords) VALUES ($1, $2, $3, $4);', [newUser.surName, newUser.firstName, newUser.email, newUser.psw])
+db.none('INSERT INTO users(surname, firstname, email, passwords) VALUES ($1, $2, $3, $4);', [newUser.surname, newUser.firstname, newUser.email, newUser.passwords])
       .then(() => {
         res.redirect('/signup/success?message=Signup%20success.')
      })
