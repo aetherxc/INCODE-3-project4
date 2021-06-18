@@ -29,7 +29,7 @@ router.get('/', (req, res) => {
       console.log(err)
       res.send('error')
     } else {
-      res.render('pages/login', {title: "Express", logout: "logout successful"})
+      res.render('pages/login', {logout: "logout successful"})
     }
   })
 })
