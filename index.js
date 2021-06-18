@@ -2,21 +2,9 @@
 
 const express = require('express')
 const app = express()
-const bcrypt = require('bcrypt')
-const saltRounds = 10
-const port = 3000
 
-// Set port to 300
-const PORT = process.env.PORT || 3000
-// Connect to database
-const { pgp } = require('pg')
-
-// look for static files in 'public' folder
-// app.use(express.static ('public'))
-
-//postgres setup
-const db = require('./database')
-const { Router } = require('express')
+// Check for port in env 
+const port = process.env.PORT || 3000
 
 app.listen(port, () => {
     console.log(`Project 4 app listening at http://localhost:${port}`)
