@@ -2,6 +2,9 @@
 
 const express = require('express')
 const app = express()
+const { check, validationResult } = require('express-validator')
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
@@ -32,7 +35,8 @@ const loginRouter = require('./routes/login.js')
 const signupRouter = require('./routes/signup.js')
 const logoutRouter = require('./routes/logout.js')
 const manage_scheduleRouter = require('./routes/manage_schedule.js')
-const user_info_pageRouter = require('./routes/user_info_page.js')
+const user_info_pageRouter = require('./routes/user_info_page.js');
+const bodyParser = require('body-parser');
 
 // parse post data
 app.use(express.json())

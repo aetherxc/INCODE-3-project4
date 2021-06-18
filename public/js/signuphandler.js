@@ -19,7 +19,8 @@ firstname.addEventListener("oninput",)
 
 
 function validateNames() {
-    /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i.test(firstname.value)
+const firstnameValidate = /^[A-Za-zÀ-ÖØ-öø-ÿ \-']+$/i.test(firstname.value)
+console.log(firstnameValidate)
 
 }
 

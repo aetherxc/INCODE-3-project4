@@ -3,16 +3,10 @@ const router = express.Router()
 const db = require('../database')
 const bcrypt = require('bcrypt')
 const saltRounds = 10
-
-
-
-router.get('/', (req, res) => {
-  res.render('pages/signup', {
-    message: req.query.message
-  })
-})
-//Ant
-router.post('/', (req, res) => {
+const app = express()
+const bodyParser = require('body-parser');
+const { check, validationResult } = require('express-validator')
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // middleware for users that are already logged in
 const loggedInMessage = (req, res, next) => {
@@ -25,14 +19,61 @@ const loggedInMessage = (req, res, next) => {
   }
 }
 
+router.get('/', loggedInMessage, (req, res) => {
+  res.render('pages/signup', {
+    message: req.query.message
+  })
+})
+
+//Ant
 // validate the fields
 
-//check is the entered passwords are the same
-console.log(req.body.psw)
+router.post('/', urlencodedParser, [
+    check('firstName', 'Please enter Firstname')
+    .exists()
+    .notEmpty()
+    .matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic.'),
 
-if (req.body.psw != req.body.confirmPsw) {
-  return res.redirect("/signup?message=Passwords%20doesn't%20match.Please%20renenter.")
-}
+      check('surName', 'Please enter Surname')
+      .exists()
+      .notEmpty()
+      .matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic.'),
+
+    check('email', 'Email is not valid')
+      .isEmail()
+      .normalizeEmail(),
+      
+   check('psw', 'Plesae enter Password')
+     .exists()
+     .notEmpty()
+   .matches(/^(?=.*[A-Za-z])(?=.*[!@#$&*])(?=.*[0-9]).{5}$/).withMessage('Password must be min 5 char long. At least one character and number and least one special character.'),
+     // .matches('confirmPsw').withMessage('Password must match'),
+     
+    check('confirmPsw, Please enter Password')
+      .exists()
+      .notEmpty(),
+  
+     //.matches('psw').withMessage('Password must match'),
+
+   
+
+  ], (req, res) => {
+
+    const errors = validationResult(req)
+    if(!errors.isEmpty()) {
+    return res.status(422).jsonp(errors.array())
+     const alert = errors.array()
+      alert
+
+    //res.render('/', {
+      //alert
+    //})
+    }
+    //check is the entered passwords are the same
+//console.log(req.body.psw)
+//if (req.body.psw != req.body.confirmPsw) {
+  //return res.redirect("/signup?message=Passwords%20doesn't%20match.Please%20renenter.")
+//}
 
 //check: Is email in database?
 db.oneOrNone('SELECT * FROM users WHERE email = $1;', [req.body.email.toLowerCase()])
