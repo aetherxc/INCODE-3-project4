@@ -9,18 +9,9 @@
     "seed-schtable": "psql -h localhost -d project4 -f sql/seed_schedules.sql",
     "create-usertable": "psql -h localhost -d project4 -f sql/create_users.sql",
     "seed-usertable": "psql -h localhost -d project4 -f sql/seed_users.sql",
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -r dotenv/config index.js"
-=======
-<<<<<<< HEAD
     "dev": "nodemon -r dotenv/config index.js",
-=======
-    "dev": "nodemon index.js",
->>>>>>> main
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
->>>>>>> 2cd21fef8532d30fa2caaea736a1adb712cfe3f5
   },
   "author": "",
   "license": "MIT",
@@ -29,13 +20,9 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "express-session": "^1.17.2",
-=======
     "express-ejs-layouts": "^2.5.1",
-    "express-session": "^1.17.2",
     "pg": "^8.6.0",
->>>>>>> 2cd21fef8532d30fa2caaea736a1adb712cfe3f5
     "pg-promise": "^10.10.2"
   },
   "repository": {
