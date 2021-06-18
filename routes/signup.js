@@ -4,6 +4,8 @@ const db = require('../database')
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 
+
+
 router.get('/', (req, res) => {
   res.render('pages/signup', {
     message: req.query.message
@@ -11,6 +13,17 @@ router.get('/', (req, res) => {
 })
 //Ant
 router.post('/', (req, res) => {
+
+// middleware for users that are already logged in
+const loggedInMessage = (req, res, next) => {
+  if (req.session.userId) {
+    res.render('pages/signup', {
+      message: req.query.message ? req.query.message : 'You are already logged in, are you sure you want to sign up?'
+    })
+  } else {
+    next()
+  }
+}
 
 // validate the fields
 

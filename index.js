@@ -2,26 +2,15 @@
 
 const express = require('express')
 const app = express()
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 // Set port 
 const PORT = process.env.PORT || 3000
-// Connect to database
-const { pgp } = require('pg');
 
 // look for static files in 'public' folder
 app.use(express.static ('public'))
-
-//postgres setup
-const db = require('./database');
-const { Router } = require('express');
-
-//ant added line 21-30 14/6
-require('dotenv').config()
 
 const hostname = process.env.PG_HOST;
 const database = process.env.DATABASE;
