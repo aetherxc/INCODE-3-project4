@@ -9,7 +9,11 @@
     "seed-schtable": "psql -h localhost -d project4 -f sql/seed_schedules.sql",
     "create-usertable": "psql -h localhost -d project4 -f sql/create_users.sql",
     "seed-usertable": "psql -h localhost -d project4 -f sql/seed_users.sql",
+<<<<<<< HEAD
     "dev": "nodemon -r dotenv/config index.js",
+=======
+    "dev": "nodemon index.js",
+>>>>>>> main
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },

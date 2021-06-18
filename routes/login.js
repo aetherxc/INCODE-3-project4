@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const express = require('express')
 const router = express.Router()
 const db = require('../database')
@@ -31,3 +32,5 @@ router.get('/', redirectToHome, (req, res) => {
 // }
 
 module.exports = router
+=======
+>>>>>>> main
