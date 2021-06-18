@@ -1,0 +1,37 @@
+<h1>Sign up</h1>
+
+<form id="signupform" action="/signup" method="POST" >
+    <div class="container">
+        <p>Please fill in this form to create an account.</p>
+
+        <label for="firstName"><b>First name</b></label>
+        <input type="text" placeholder="Enter first name" id="firstName" name="firstName" required>
+        <p id="error-firstname" class="error"> Error firstname</p>
+
+
+        <label for="surName"><b>Surname</b></label>
+        <input type="text" placeholder="Enter Surname" id="surName" name="surName" required>
+        <p id="error-lastname" class="error"> Error surname </p>
+
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="email" name="email" required>
+        <p id="error-email" class="error"> Error email </p>
+
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" name="psw"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" title ="Minimum eight characters, at least one letter, one number and one special character" required>
+        <p id="error-psw" class="error"> Error password </p>
+
+        <label for="confirm-psw"><b>Re Enter Password</b></label>
+        <input type="password" placeholder="Re-Enter Password" id="confirmpsw"name="confirmPsw" required>
+        <p id="error-mpsw" class="error"> Error password </p>
+
+        <% if(message) { %>
+            <p style="color:red;"><%= message %></p>
+          <% } %>
+        <div class="">
+            <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+    </div>
+</form>

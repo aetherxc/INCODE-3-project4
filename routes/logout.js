@@ -1,12 +1,37 @@
 const express = require('express')
 const router = express.Router()
-const db = require('../database')
-const bcrypt = require('bcrypt')
-// const { redirectToLogin } = require('../middleware')
 
+
+// router.get('/', (req, res) => {
+//   if (req.session) {
+//     res.clearCookie('cookie', { path: '/' })
+//     req.session.destroy(err => {
+//       if (err) {
+//         console.log('error')
+//         res.status(400).send('Unable to log out')
+//       } else {
+//         console.log('2nd last else')
+//         res.clearCookie('cookie', { path: '/' })
+//         res.render('pages/login')
+//       }
+//     });
+//   } else {
+//     console.log('last else part')
+//     res.render('pages/login')
+//   }
+// })
 
 router.get('/', (req, res) => {
-  res.render('pages/logout')
+  console.log('first scope')
+  req.session.destroy( err => {
+    console.log('second scope')
+    if (err) {
+      console.log(err)
+      res.send('error')
+    } else {
+      res.render('pages/login', {title: "Express", logout: "logout successful"})
+    }
+  })
 })
 
 module.exports = router
