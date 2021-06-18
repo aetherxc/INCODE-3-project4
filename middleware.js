@@ -9,14 +9,14 @@ const redirectToLogin = (req, res, next) => {
   }
   
   
-  // redirect to home page if user is logged in
-  const redirectToHome = (req, res, next) => {
+// redirect to home page if user is logged in
+const redirectToHome = (req, res, next) => {
     if(req.session.userId) {
-      res.redirect('/')
+        res.redirect('/')
     } else {
-      next()
+        next()
     }
-  }
+}
   
   
   
