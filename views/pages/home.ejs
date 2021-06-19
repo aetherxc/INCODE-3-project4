@@ -1,2 +1,23 @@
 <%- include('../partials/header.ejs') %>
+
 <h1>Shows all Schedules</h1>
+
+<div class="schedules">
+
+        <% for (let i =0; i < schedules.length; i++) { %>
+          <p><strong>User id</strong> <%=schedules[i].id_user%></p>
+          <p><strong>Day:</strong> <% switch (schedules[i].day) 
+            {case 1: %>Monday<% break;
+            case 2: %>Tuesday<% break;
+            case 3: %>Wednesday<% break;
+            case 4: %>Thursday<% break;
+            case 5: %>Friday<% break;
+            case 6: %>Saturday<% break;
+            case 7: %>Sunday<% break;
+            default: %><%=schedules[i].day %>
+            <% } %></p> 
+          <p><strong>Start at</strong> <%=schedules[i].start_time%></p>
+          <p><strong>End at</strong> <%=schedules[i].end_time%></p>
+
+        <% } %>
+        <div>

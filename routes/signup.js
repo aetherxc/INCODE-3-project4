@@ -74,11 +74,7 @@ router.post('/', [
       alert
     })
     }
-    //check is the entered passwords are the same
-//console.log(req.body.psw)
-//if (req.body.psw != req.body.confirmPsw) {
-  //return res.redirect("/signup?message=Passwords%20doesn't%20match.Please%20renenter.")
-//}
+   
 
 //check: Is email in database?
 db.oneOrNone('SELECT * FROM users WHERE email = $1;', [req.body.email.toLowerCase()])

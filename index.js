@@ -5,7 +5,7 @@ const app = express()
 const { check, validationResult } = require('express-validator')
 
 
-
+app.use(express.static ('public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
@@ -31,6 +31,7 @@ const signupRouter = require('./routes/signup.js')
 const logoutRouter = require('./routes/logout.js')
 const employee_infoRouter = require('./routes/employee_info.js')
 const new_scheduleRouter = require('./routes/new_schedule.js')
+const homepageRouter = require('./routes/home.js')
 
 
 // parse post data
@@ -64,5 +65,5 @@ app.use('/signup', signupRouter)
 app.use('/logout', logoutRouter)
 app.use('/employee_info', employee_infoRouter)
 app.use('/new_schedule', new_scheduleRouter)
-
+app.use('/home', homepageRouter)
 
