@@ -12,14 +12,6 @@ app.use(express.urlencoded({ extended: true }))
 // Set port 
 const PORT = process.env.PORT || 3000
 
-const hostname = process.env.PG_HOST;
-const database = process.env.DATABASE;
-const port = process.env.PORT;
-
-
-const hostname = process.env.PG_HOST;
-const database = process.env.DATABASE;
-
 app.listen(PORT, () => {
     console.log(`Project 4 app listening at http://localhost:${PORT}`)
 }) 
