@@ -1,8 +1,11 @@
 DROP TABLE IF EXISTS schedules;
 CREATE TABLE IF NOT EXISTS schedules (
   id SERIAL PRIMARY KEY,
-  ID_user VARCHAR(255) NOT NULL,
+  ID_user INT NOT NULL,
   day INTEGER NOT NULL CHECK (day >= 1 AND day <= 7),
   start_time TIME NOT NULL,
-  end_time  TIME NOT NULL
+  end_time  TIME NOT NULL,
+  FOREIGN KEY(ID_user) 
+  REFERENCES users(id)
+  ON DELETE CASCADE
 );
