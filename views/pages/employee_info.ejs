@@ -1,4 +1,3 @@
-
 <%- include('../partials/header.ejs') %>
 
 <h1>Employee info</h1>
@@ -14,15 +13,15 @@
   <% for (let i =0; i < employeeSchedule.length; i++) { %>
     <ul>
       <li><strong>Day</strong>
-        <% switch (employeeSchedule[i].day) 
-        {case 1: %>Monday<% break;
+        <% switch (employeeSchedule[i].day) {
+        case 1: %>Monday<% break;
         case 2: %>Tuesday<% break;
         case 3: %>Wednesday<% break;
         case 4: %>Thursday<% break;
         case 5: %>Friday<% break;
         case 6: %>Saturday<% break;
         case 7: %>Sunday<% break;
-        default: %><%=schedules[i].day %>
+        default: %><%=employeeSchedule[i].day %>
         <% } %></li>
       <li><strong>Start time</strong><%=employeeSchedule[i].start_time%></li>
       <li><strong>End time</strong><%=employeeSchedule[i].end_time%></li>
