@@ -26,23 +26,8 @@ router.get('/', redirectToLogin, (req, res) => {
       res.send(err)
     })
 })
-.catch((err) => {
-   res.send(err)
-})
-})
 
-//maybe??       //Step 3: parameterized routes users is this correct?
-//app.get('/users/:id/schedules',(req, res) => {
-  // const id = Number(req.params.id)
-   //let schedules = []
 
-   //for (i = 0; i < data.schedules.length; i++) {
-   //let currentSchedule = data.schedules[i]
-   //if ( currentSchedule.user_id === id) {
-     //  schedules.push(currentSchedule)
-      // }
-  // }
-   //res.send(schedules); 
-//})
+
 
 module.exports = router
