@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "create-database": "createdb project4",
-    "create-schtable": "psql -U postgres -h localhost -d project4 -f sql/create_schedules.sql",
-    "seed-schtable": "psql -U postgres -h localhost -d project4 -f sql/seed_schedules.sql",
+    "create-schtable": "psql -h localhost -d project4 -f sql/create_schedules.sql",
+    "seed-schtable": "psql -h localhost -d project4 -f sql/seed_schedules.sql",
     "create-usertable": "psql -h localhost -d project4 -f sql/create_users.sql",
     "seed-usertable": "psql -h localhost -d project4 -f sql/seed_users.sql",
     "test": "echo \"Error: no test specified\" && exit 1",
