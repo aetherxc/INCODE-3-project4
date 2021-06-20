@@ -6,7 +6,7 @@ const { redirectToLogin } = require('../middleware')
 router.get('/', redirectToLogin, (req, res) => {
   db.any('SELECT * FROM schedules;')
   .then((schedules) => {
-  console.log(schedules)
+  // console.log(schedules)
   res.render('pages/home', {
       schedules: schedules
   })

@@ -48,14 +48,13 @@ app.set('view engine','ejs')
 // session setup
 app.use(session({
     cookie: {
-      maxAge: 1000 * 60 * 60, // 1 hour
-      // secure: false // must be true if served via HTTPS & false if served via HTTP
-    },
+      maxAge: 1000 * 60 * 60},
     name: 'cookie',
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
-  }))
+  })
+)
 
 
 //Routes
