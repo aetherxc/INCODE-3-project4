@@ -6,3 +6,4 @@ CREATE TABLE IF NOT EXISTS users (
   email VARCHAR(255) NOT NULL,
   passwords VARCHAR(64) NOT NULL
 );
+
