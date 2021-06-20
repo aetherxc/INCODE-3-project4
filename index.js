@@ -60,6 +60,6 @@ app.use('/', homeRouter)
 app.use('/login', loginRouter)
 app.use('/signup', signupRouter)
 app.use('/logout', logoutRouter)
-app.use('/employee_info/:id', employee_infoRouter)
+app.use('/employee_info', employee_infoRouter)
 app.use('/new_schedule', new_scheduleRouter)
 
