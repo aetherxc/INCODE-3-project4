@@ -16,11 +16,12 @@ router.get('/:id(\\d+)', redirectToLogin, (req, res) => {
           ON \
             users.id = schedules.id_user \
           WHERE \
-          users.id = $1;', req.params.id)
+          users.id = $1;', [req.params.id? req.params.id : req.session.userId])
     .then((schedule) => {
       console.log(schedule)
       res.render('pages/employee_info', {
-          employeeSchedule: schedule
+          employeeSchedule: schedule,
+          id:req.session.userId
       })
     })
     .catch((err) => {

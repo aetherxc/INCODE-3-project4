@@ -18,8 +18,8 @@ ON \ users.id = schedules.id_user ' )
   .then((schedules) => {
    console.log(schedules)
   res.render('pages/home', {
-    employeeSchedule: schedules
-    
+    employeeSchedule: schedules,
+    id:req.session.userId
   })
 })
 .catch((err) => {
