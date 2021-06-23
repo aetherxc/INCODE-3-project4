@@ -3,10 +3,10 @@
 <h1>Shows all Schedules</h1>
 
 <div class="schedules">
-  <% for (let i =0; i < schedules.length; i++) { %>
-    <p><strong>User id</strong> <%=schedules[i].id_user%></p>
+  <% for (let i =0; i < employeeSchedule.length; i++) { %>
+    <p><a href="/employee_info/<%=employeeSchedule[i].id_user%>">User id</a> <%=employeeSchedule[i].id_user%></p>
     <p><strong>Day:</strong> 
-      <% switch (schedules[i].day) 
+      <% switch (employeeSchedule[i].day) 
       {case 1: %>Monday<% break;
       case 2: %>Tuesday<% break;
       case 3: %>Wednesday<% break;
@@ -14,9 +14,9 @@
       case 5: %>Friday<% break;
       case 6: %>Saturday<% break;
       case 7: %>Sunday<% break;
-      default: %><%=schedules[i].day %>
+      default: %><%=employeeSchedule[i].day %>
       <% } %></p> 
-    <p><strong>Start at</strong> <%=schedules[i].start_time%></p>
-    <p><strong>End at</strong> <%=schedules[i].end_time%></p>
+    <p><strong>Start at</strong> <%=employeeSchedule[i].start_time%></p>
+    <p><strong>End at</strong> <%=employeeSchedule[i].end_time%></p>
   <% } %>
 <div>
