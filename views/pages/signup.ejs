@@ -1,5 +1,8 @@
-<%- include('../partials/header.ejs') %>
 
+<nav>
+    <img src="/full_logo_white.png" alt="Mr. Coffee Logo White">
+  
+</nav>
 
 <div class="container">
     <h1>Sign up</h1>
@@ -24,9 +27,11 @@
               </div>
     <% } %>
 
+    <p>Please fill in this form to create an account.</p>
+
+
 <form id="signupform" action="/signup" method="POST" novalidate>
     <div class="container">
-        <p>Please fill in this form to create an account.</p>
 
         <label for="firstName"><b>First name</b></label>
         <input type="text" placeholder="Enter first name" id="firstName" name="firstName" required>
@@ -46,8 +51,9 @@
         <label for="confirmPsw"><b>Re Enter Password</b></label>
         <input type="password" placeholder="Re-Enter Password" id="confirmPsw"name="confirmPsw" required>
 
-        <div class="">
+        <div class="signup">
             <button type="submit" class="signupbtn">Sign Up</button>
+            <p>Already a user? <a href="/">Log in</a></p>
         </div>
     </div>
 </form>

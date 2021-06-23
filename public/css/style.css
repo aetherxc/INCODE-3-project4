@@ -33,17 +33,13 @@ h1 {
   
 /* footer */
 .footer {
+color: teal;
 background-color: #6a7c8a;
 position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;     
-margin-top: 40px;
-padding: 15px;
-text-align: center;    
+bottom: 0;
 width: 100%;
-  
 }
+
 
 .schedules {
     margin-left: auto;
@@ -53,8 +49,10 @@ width: 100%;
 }
 
 .container {
-    text-align: center;
-    padding: px;
+  display: flex;
+  flex-direction: column;
+    padding: 10px;
+    width: 60%;
 }
 
 h3 {
@@ -78,4 +76,25 @@ ul {
  margin-left: auto;
 margin-right: auto;
 width: 15%;
+}
+
+.einfo {
+  text-align: center;
+}
+
+p, h2 {
+  text-align: center;
+}
+
+.signup {
+padding-top: 20px; 
+
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: auto;
+  margin-left: auto;
 }
