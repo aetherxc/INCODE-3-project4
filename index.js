@@ -62,4 +62,3 @@ app.use('/signup', signupRouter)
 app.use('/logout', logoutRouter)
 app.use('/employee_info', employee_infoRouter)
 app.use('/new_schedule', new_scheduleRouter)
-
