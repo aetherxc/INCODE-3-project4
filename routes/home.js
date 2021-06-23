@@ -8,7 +8,8 @@ router.get('/', redirectToLogin, (req, res) => {
   .then((schedules) => {
   // console.log(schedules)
   res.render('pages/home', {
-      schedules: schedules
+    employeeSchedule: schedules,
+    id:req.session.userId
   })
 })
 .catch((err) => {

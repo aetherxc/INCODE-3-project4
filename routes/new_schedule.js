@@ -9,7 +9,10 @@ const session = require('express-session')
 
 // get req 
 router.get('/', redirectToLogin, (req, res) => {
-  res.render('pages/new_schedule', {message: req.query.message} )
+  res.render('pages/new_schedule', {
+    message: req.query.message,
+    id:req.session.userId
+  })
 })
 
 // post req
