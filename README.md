@@ -1,5 +1,5 @@
 # Project 4
-We made an app for employees to view their schedule and add new timings to their schedule.
+We made an app for employees to view their schedule and add new timings to their schedule. And we have a very cool error page, thanks to Ant.
 
 ## How to download
 1. Open up which folder you'd like this repository to live in
@@ -8,12 +8,8 @@ We made an app for employees to view their schedule and add new timings to their
 git clone https://github.com/aetherxc/INCODE-3-project4.git
 ```
 
-## Notes on CSS
-Some values that I either learnt while putting this project together or that I believe are worth checking out for more dynamic css:
-- custom properties and the general thinking that goes along with what should be a custom property/variable
-- min(), max(), clamp()
-- calc()
-- absolute vertical centering
+## Technologies used on the project
+- Express which is a Node.js web application framework 
+- PostgreSQL for our db
+- html/css/ejs for front-end
 
-## Notes for students
-This is intended as a guide only. Projects submitted using the same code won't pass.
