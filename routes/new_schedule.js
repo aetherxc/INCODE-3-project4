@@ -10,7 +10,6 @@ const session = require('express-session')
 // get req 
 router.get('/', redirectToLogin, (req, res) => {
   db.any('SELECT \
-          users.firstname, users.surname, users.email, \
           schedules.day, schedules.start_time, schedules.end_time \
         FROM \
           users \
