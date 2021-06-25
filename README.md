@@ -1,13 +1,11 @@
-# Mr. Coffee - Static Website
-This is copied from Cat's github and I copied it here just to keep this structure and format as a sample 
-
-This site is used for the students of INCO Academy's INCODE Bootcamp to see an example of what their site might look like. Mr. Coffee is a fictional café based in Paris, France that students were required to build a static website for using vanilla HTML and CSS.
+# Project 4
+We made an app for employees to view their schedule and add new timings to their schedule.
 
 ## How to download
 1. Open up which folder you'd like this repository to live in
 2. Clone repository to your machine (this will download all of it)
 ```
-git clone https://github.com/cattrn/incode3Project1_CT.git
+git clone https://github.com/aetherxc/INCODE-3-project4.git
 ```
 
 ## Notes on CSS
