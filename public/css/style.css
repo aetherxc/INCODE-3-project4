@@ -112,3 +112,11 @@ html, body {
   background: black;
   text-align: center;
 }
+
+.newschedule {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  width: 100%;
+
+}

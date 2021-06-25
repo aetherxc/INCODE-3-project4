@@ -9,9 +9,10 @@
       </div>
 <% } %>
 
-<div class="container">
-    <h1>Make a new schedule</h1>
-    <p>Please fill in this form to add a new schedule.</p>
+<h1>Make a new schedule</h1>
+<p>Please fill in this form to add a new schedule.</p>
+
+<div class="newschedule">
     <div class="day-select" style="width:200px;">
         <label for="day">Select a day</label>
         <select name="day" id="day" form="newschedule" required>
@@ -33,10 +34,7 @@
         <label for="endTime">Choose an end time</label>
         <input id="endTime" type="time" name="endTime"
         min="17:00" max="18:00" required>
-
-        <div class="">
             <button type="submit" class="submit-schedule">Submit schedule</button>
-        </div>
     </form>
 </div>
 
