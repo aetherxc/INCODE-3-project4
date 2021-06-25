@@ -9,7 +9,7 @@ git clone https://github.com/aetherxc/INCODE-3-project4.git
 ```
 
 ## Installation 
-- after cloning the repo, please edit the .env file and add your values for the variables 
+- after cloning the repo, please add a .env file (a template is given) and add your values for the variables 
 ```
  npm install (to install the pacakges)
 ```
