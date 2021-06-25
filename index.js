@@ -15,6 +15,9 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Project 4 app listening at http://localhost:${PORT}`)
 }) 
+
+
+
 //-----------------------------------------------------
 //Aseer
 
@@ -31,6 +34,7 @@ const signupRouter = require('./routes/signup.js')
 const logoutRouter = require('./routes/logout.js')
 const employee_infoRouter = require('./routes/employee_info.js')
 const new_scheduleRouter = require('./routes/new_schedule.js')
+const errorRouter = require('./routes/error.js')
 
 // parse post data
 app.use(express.json())
@@ -62,3 +66,9 @@ app.use('/signup', signupRouter)
 app.use('/logout', logoutRouter)
 app.use('/employee_info', employee_infoRouter)
 app.use('/new_schedule', new_scheduleRouter)
+app.use('/error', errorRouter)
+
+app.get('/*', (req, res) => {
+  res.render('pages/error', {
+  })
+})

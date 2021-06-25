@@ -33,11 +33,12 @@ h1 {
   
 /* footer */
 .footer {
-color: teal;
+color: white;
 background-color: #6a7c8a;
-position: absolute;
-bottom: 0;
-width: 100%;
+position:absolute;
+width: auto;
+
+
 }
 
 
@@ -97,4 +98,17 @@ padding-top: 20px;
   width: 35%;
   margin-right: auto;
   margin-left: auto;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+.text {
+  color: red;
+}
+
+.notFound {
+  background: black;
+  text-align: center;
 }
