@@ -28,12 +28,10 @@ router.get('/', loggedInMessage, (req, res) => {
 
 router.post('/', [
     check('firstName', 'Please enter Firstname')
-    .exists()
     .notEmpty()
     .matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic.'),
 
       check('surName', 'Please enter Surname')
-      .exists()
       .notEmpty()
       .matches(/^[A-Za-z\s]+$/).withMessage('Name must be alphabetic.'),
 
@@ -41,7 +39,7 @@ router.post('/', [
       .isEmail()
       .normalizeEmail(),
       
-   check('psw', 'Plesae enter Password')
+   check('psw', 'Please enter Password')
      .exists()
      .notEmpty()
    .matches(/^(?=.*[A-Za-z])(?=.*[!@#$&*])(?=.*[0-9]).{5,}$/).withMessage('Password must be min 5 char long. At least one character and number and least one special character.'),

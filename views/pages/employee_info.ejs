@@ -2,30 +2,44 @@
 
 <h1>Employee info</h1>
 
-<div class="employee_info">
-  <ul>
-    <li><strong>First name:</strong><%= employeeSchedule[0].firstname %></li>
-    <li><strong>Surname:</strong><%= employeeSchedule[0].surname %></li>
-    <li><strong>Email:</strong><%= employeeSchedule[0].email %></li>
-  </ul>
-  <div>
-  <h3>Existing schedules</h3>
-  <% for (let i =0; i < employeeSchedule.length; i++) { %>
-    <ul>
-      <li><strong>Day</strong>
-        <% switch (employeeSchedule[i].day) 
-        {case 1: %>Sunday<% break;
-        case 2: %>Monday<% break;
-        case 3: %>Tuesday<% break;
-        case 4: %>Wednesday<% break;
-        case 5: %>Thursday<% break;
-        case 6: %>Friday<% break;
-        case 7: %>Saturday<% break;
-        default: %><%=employeeSchedule[i].day %>
-        <% } %></li>
-      <li><strong>Start time</strong><%=employeeSchedule[i].start_time%></li>
-      <li><strong>End time</strong><%=employeeSchedule[i].end_time%></li>
-    </ul>
-  <% } %></p>
+
+<div class =einfo>
+<p><strong> Name:</strong><%= employeeSchedule[0].firstname %> <%= employeeSchedule[0].surname %></p>
+    <p><strong>Email:</strong><%= employeeSchedule[0].email %></p>
   </div>
+
+  
+  <h2> Schedule Info</h2>
+
+  <div class="schedules">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Day:</th>
+          <th scope="col">Start time:</th>
+          <th scope="col">End time:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (let i =0; i < employeeSchedule.length; i++) { %>
+        <tr>
+          <th scope="row">
+          <% switch (employeeSchedule[i].day) {
+          case 1: %>Monday<% break;
+          case 2: %>Tuesday<% break;
+          case 3: %>Wednesday<% break;
+          case 4: %>Thursday<% break;
+          case 5: %>Friday<% break; 
+          case 6: %>Saturday<% break;
+          case 7: %>Sunday<% break;
+          default: %><%=employeeSchedule[i].day %>
+          <% } %> 
+        <th scope="row"><%=employeeSchedule[i].start_time%></th>
+        <th scope="row"><%=employeeSchedule[i].end_time%></th>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+  
 <div>
+
