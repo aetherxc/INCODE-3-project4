@@ -1,5 +1,5 @@
 # Project 4
-We made an app for employees to view their schedule and add new timings to their schedule. And we have a very cool error page, thanks to Ant.
+We made an app for employees of Mr. Coffee to view their schedule and add new timings to their schedule. And we have a very cool error page, thanks to Ant.
 
 ## How to download
 1. Open up which folder you'd like this repository to live in
