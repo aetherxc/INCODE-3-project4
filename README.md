@@ -14,7 +14,9 @@ git clone https://github.com/aetherxc/INCODE-3-project4.git
  npm install (to install the pacakges)
 ```
 - run the db scripts to create and populate the tables (in windows please add "-U <user name>" after "psql" in the scripts before running them)
- 
+```
+ npm start (to start the app)
+```
 
 ## Technologies used on the project
 - Express which is a Node.js web application framework 
