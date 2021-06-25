@@ -8,6 +8,14 @@ We made an app for employees to view their schedule and add new timings to their
 git clone https://github.com/aetherxc/INCODE-3-project4.git
 ```
 
+## Installation 
+- after cloning the repo, please edit the .env file and add your values for the variables 
+```
+ npm install (to install the pacakges)
+```
+- run the db scripts to create and populate the tables (in windows please add "-U <user name>" after "psql" in the scripts before running them)
+ 
+
 ## Technologies used on the project
 - Express which is a Node.js web application framework 
 - PostgreSQL for our db
