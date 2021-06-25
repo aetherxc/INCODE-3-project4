@@ -43,37 +43,3 @@
   
 <div>
 
-  <div>
-    <h3>Existing schedules</h3>
-    <div class="schedules">
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">Day:</th>
-          <th scope="col">Start time:</th>
-          <th scope="col">End time:</th>
-        </tr>
-      </thead>
-      <tbody>
-    <% for (let i =0; i < employeeSchedule.length; i++) { %>
-      <tr>
-      <th scope="row">
-                <% switch (employeeSchedule[i].day) 
-                {case 1: %>Sunday<% break;
-                case 2: %>Monday<% break;
-                case 3: %>Tuesday<% break;
-                case 4: %>Wednesday<% break;
-                case 5: %>Thursday<% break;
-                case 6: %>Friday<% break;
-                case 7: %>Saturday<% break;
-                default: %><%=employeeSchedule[i].day %>
-              <% } %>
-                <th scope="row"><%=employeeSchedule[i].start_time%></th>
-                <th scope="row"><%=employeeSchedule[i].end_time%></th>
-               </tr>
-              <% } %>
-               </tbody>
-    </table>
-</div>
-
-</div>
