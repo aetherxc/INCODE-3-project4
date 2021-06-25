@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../database')
-const bcrypt = require('bcrypt')
 const { redirectToLogin } = require('../middleware')
 const { query } = require('../database')
+
 
 router.get('/:id(\\d+)', redirectToLogin, (req, res) => {
   db.any('SELECT \
@@ -28,4 +28,8 @@ router.get('/:id(\\d+)', redirectToLogin, (req, res) => {
       res.send(err)
     })
 })
+
+
+
+
 module.exports = router
